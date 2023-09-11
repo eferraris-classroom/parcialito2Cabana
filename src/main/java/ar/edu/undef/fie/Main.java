@@ -1,19 +1,26 @@
 package ar.edu.undef.fie;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int [] numeros = {10 , 55, 32, 1, 0};
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        int valor = 15;
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        boolean existe = encontrarValor( numeros, valor);
+
+        System.out.println("El valor buscado ¿existe en la lista? :  " + existe);
         }
+
+    private static boolean encontrarValor(int[] numeros, int valor) {
+        boolean noExiste = false;
+        int [] num = numeros;
+        for (var aux: num) {
+            if (valor == aux) {
+                boolean existe = true;
+                return existe;
+            }
+        }
+        return noExiste;
     }
 }
